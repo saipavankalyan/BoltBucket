@@ -237,3 +237,5 @@ const interior = [
       "https://images-visualizer.gm.com/swatches/chevrolet/us/b2c/en/2023/corvette-stingray/small/o_aricbs.png",
   },
 ];
+
+export default { exterior, roof, wheels, interior };
