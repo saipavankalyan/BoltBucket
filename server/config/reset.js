@@ -8,7 +8,7 @@ const createExteriorTable = async () => {
 
     CREATE TABLE IF NOT EXISTS exterior (
         id SERIAL PRIMARY KEY,
-        color VARCHAR(50) NOT NULL,
+        name VARCHAR(50) NOT NULL,
         price INT NOT NULL,
         img_url VARCHAR(255) NOT NULL
     )`;
@@ -78,7 +78,7 @@ const createInteriorTable = async () => {
 const seedExteriorTable = async () => {
   await createExteriorTable();
   data.exterior.forEach((element) => {
-    const query = `INSERT INTO exterior (color, price, img_url) VALUES ($1, $2, $3)`;
+    const query = `INSERT INTO exterior (name, price, img_url) VALUES ($1, $2, $3)`;
     const values = [element.color, element.price, element.img_url];
 
     pool.query(query, values, (err, res) => {
@@ -160,11 +160,12 @@ const createCustomCarsTable = async () => {
 
   CREATE TABLE IF NOT EXISTS custom_cars (
       id SERIAL PRIMARY KEY,
-      exterior_id INT NOT NULL,
-      roof_id INT NOT NULL,
-      wheels_id INT NOT NULL,
-      interior_id INT NOT NULL,
-      price INT NOT NULL
+      name VARCHAR(64),
+      exterior INT,
+      roof INT,
+      wheels INT,
+      interior INT,
+      price INT
   )`;
   try {
     const res = await pool.query(query);

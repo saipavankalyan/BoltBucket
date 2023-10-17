@@ -26,19 +26,20 @@ const getCustomCarById = async (req, res) => {
 };
 
 const createCustomCars = async (req, res) => {
-  const { exterior, roof, wheels, interior, price } = req.body;
+  const { exterior, roof, wheel, interior, price, name } = req.body;
   try {
     const query = `
-        INSERT INTO custom_cars (exterior, roof, wheels, interior, price)
-        VALUES ($1, $2, $3, $4, $5)
+        INSERT INTO custom_cars (exterior, roof, wheels, interior, price, name)
+        VALUES ($1, $2, $3, $4, $5, $6)
         RETURNING *
     `;
     const result = await pool.query(query, [
       exterior,
       roof,
-      wheels,
+      wheel,
       interior,
       price,
+      name,
     ]);
     res.status(201).json(result.rows[0]);
   } catch (err) {

@@ -18,7 +18,7 @@ const request = async (method, url, body = null) => {
   let response;
 
   try {
-    response = await fetch(url, options);
+    response = await fetch(`api${url}`, options);
   } catch (e) {
     throw new ApiError("API cannot be reached", e.message);
   }

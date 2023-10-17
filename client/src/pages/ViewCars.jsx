@@ -1,13 +1,25 @@
-import React from 'react'
-import '../App.css'
+import React, { useState, useEffect } from "react";
+import Car from "../components/Car.jsx";
+import { getAllCars } from "../services/carsAPI.jsx";
+import "../App.css";
 
 const ViewCars = () => {
-    
-    return (
-        <div>
-            
-        </div>
-    )
-}
+  const [cars, setCars] = useState([]);
+  useEffect(() => {
+    const getCars = async () => {
+      const cars = await getAllCars();
+      setCars(cars);
+    };
 
-export default ViewCars
+    getCars();
+  }, []);
+
+  return (
+    <div>
+      {!cars && <h1>No cars have been created yet ☹️</h1>}
+      {cars && cars.map((car) => <Car key={car.id} car={car} />)}
+    </div>
+  );
+};
+
+export default ViewCars;

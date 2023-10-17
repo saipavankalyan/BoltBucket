@@ -1,0 +1,11 @@
+.car-details {
+  width: 80%;
+  margin: 0 auto;
+  margin: 10px;
+  background-color: black;
+}
+
+.car-details img {
+  width: 100px;
+  margin: 10px;
+}

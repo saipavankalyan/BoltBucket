@@ -1,0 +1,38 @@
+.options {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.convertible {
+  width: 400px;
+}
+
+.car-name {
+  width: 100px;
+}
+
+.options {
+  background-color: rgba(0, 0, 0, 0.8);
+  width: 100vw;
+  padding: 20px 50px;
+}
+
+.price {
+  width: 150px;
+  height: 75px;
+  text-align: center;
+  padding: 20px;
+  background-color: #73020d;
+  border-radius: 5px;
+  font-weight: bold;
+  margin: 100px 50px;
+}
+
+.car-detail-form {
+  border: red 1px solid;
+  padding: 50px 100px;
+  margin: 50px auto;
+  width: 1200px;
+  background-color: black;
+}

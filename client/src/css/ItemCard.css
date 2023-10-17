@@ -1,0 +1,14 @@
+.item-card {
+  width: 140px;
+  height: 80px;
+}
+
+.item-card.selected {
+  border: 3px solid green;
+}
+
+.hover-text {
+  text-align: center;
+  font-size: 0.6rem;
+  margin: 10px;
+}

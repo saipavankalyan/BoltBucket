@@ -1,4 +1,4 @@
-import request from "../utilities/api.js";
+import { request } from "../utilities/api.js";
 
 export const getAllExteriors = () => request("GET", "/options/exteriors");
 export const getExteriorById = (id) =>
