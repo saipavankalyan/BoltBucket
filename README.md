@@ -28,6 +28,12 @@ The following **required** functionality is completed:
 
 Here's a walkthrough of implemented required features:
 
+
+https://github.com/saipavankalyan/BoltBucket/assets/30022830/9794d835-a761-4364-9b19-072334d7e06d
+
+
+
+
 <!-- Replace this with whatever GIF tool you used! -->
 
 GIF created with MacOS Screen Recorder
